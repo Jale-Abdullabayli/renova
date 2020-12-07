@@ -1,0 +1,106 @@
+@import "../../styles.scss";
+.about {
+    .about-top {
+        @include section-top();
+        margin-top: 100px;
+    }
+    .content {
+        padding: 20px;
+        font-size: 22px;
+        margin: 0 50px;
+        position: relative;
+        img {
+            height: 360px;
+            width: 100%;
+            display: block;
+            margin: 30px auto 0 auto;
+        }
+        .blurImg {
+            display: none;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            content: "";
+            background: url('../../assets/images/Mask\ Group\ 7.png') no-repeat;
+            background-position: top;
+            background-size: cover;
+            filter: blur(5px);
+            z-index: -1;
+        }
+        p {
+            margin: 0 50px;
+        }
+    }
+    .advantages {
+        .advantages-top {
+            @include section-top();
+        }
+        .row {
+            margin: 0 30px;
+            >div {
+                text-align: center;
+                .img {
+                    border: 20px solid $primaryColor;
+                    border-radius: 50%;
+                    width: 200px;
+                    height: 200px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 20px auto 40px auto;
+                    box-shadow: 1px 1px 20px -10px black;
+                    position: relative;
+                    &::after {
+                        position: absolute;
+                        content: "";
+                        background-color: $primaryColor;
+                        height: 5px;
+                        width: 90px;
+                        bottom: -50px;
+                        left: 50%;
+                        transform: translate(-50%, 0);
+                        border-radius: 1.5em;
+                    }
+                }
+                .title {
+                    font-size: 28px;
+                    font-weight: 600;
+                    margin-bottom: 10px;
+                }
+                p {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    .mission {
+        .mission-top {
+            @include section-top();
+        }
+        p {
+            font-size: 22px;
+            font-weight: 500;
+        }
+    }
+}
+
+
+/*media-queries*/
+
+@media (max-width:768px) {
+    .about .content {
+        margin: 0;
+        img {
+            display: none;
+        }
+        .blurImg {
+            display: block;
+        }
+        p {
+            color: white;
+            margin: 0 20px;
+        }
+    }
+}

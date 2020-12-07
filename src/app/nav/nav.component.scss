@@ -1,0 +1,124 @@
+nav {
+    height: 90px;
+    background-color: #fff;
+    font-size: 13px;
+    padding: 0;
+    >div {
+        border-bottom: 2px solid lightgray;
+        height: 100%;
+    }
+    .logo {
+        margin-right: 20px;
+    }
+    .nav-link {
+        color: #202126;
+        font-size: 13px;
+        font-weight: 500;
+    }
+    .contact {
+        div {
+            display: inline-block;
+        }
+        .watch {
+            margin-right: 70px;
+        }
+        .accounts {
+            position: relative;
+            i {
+                color: #202126;
+                margin: 0 5px;
+                font-size: 20px;
+            }
+            &::before {
+                content: "";
+                height: 2px;
+                background-color: lightgray;
+                width: 45px;
+                position: absolute;
+                left: -60px;
+                top: 50%;
+            }
+        }
+    }
+}
+
+
+/*media queries*/
+
+@media (max-width:992px) {
+    nav {
+        .container {
+            position: relative;
+            .navbar-brand {
+                height: 90px;
+                display: block;
+                margin: 0 auto;
+                line-height: 90px;
+            }
+            .navbar-toggler {
+                position: absolute;
+                left: 0;
+                top: 35px;
+            }
+            .navbar-collapse {
+                animation: fadeDownAnimation 1s;
+                width: 100vw;
+                padding: 10px;
+                background-image: linear-gradient(#44B359, #327837);
+                .nav-link {
+                    margin-left: 50px;
+                    color: white;
+                    position: relative;
+                    &:hover {
+                        &::before {
+                            position: absolute;
+                            height: 2px;
+                            width: 15px;
+                            content: "";
+                            top: 50%;
+                            left: -20px;
+                            background-color: #fff;
+                        }
+                    }
+                }
+                .accounts {
+                    float: right;
+                    i {
+                        color: white;
+                    }
+                    &::before {
+                        display: none;
+                    }
+                }
+                .watch {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:576px) {
+    nav {
+        .navbar-collapse {
+            height: 86vh;
+            position: relative;
+            .accounts {
+                position: absolute;
+                right: 20px;
+                bottom: 20px;
+            }
+        }
+    }
+}
+
+@keyframes fadeDownAnimation {
+    from {
+        opacity: 0;
+        transform: translate(0, -20px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}

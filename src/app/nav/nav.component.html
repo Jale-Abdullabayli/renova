@@ -1,0 +1,39 @@
+<nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <img src="../../assets/images/LOGO.png" class="logo" alt="logo">
+        </a>
+        <button class="navbar-toggler" type="button" (click)="toggleCollapsed()" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="fa fa-bars" id="navbarsExampleDefault" [ngbCollapse]="isOpen" ngToggler></span>
+            <span class="fa fa-times" id="navbarsExampleDefault" [ngbCollapse]="isClose" ngToggler></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault" [ngbCollapse]="isCollapsed">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/about">HAQQIMIZDA<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/services">XİDMƏTLƏRİMİZ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/works">İŞLƏRİMİZ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/contact">ƏLAQƏ</a>
+                </li>
+            </ul>
+            <div class="contact">
+                <div class="watch">BİZİ İZLƏYİN</div>
+                <div class="accounts">
+                    <a href="https://www.facebook.com/renova.baku" target="_blank"><i class="fa fa-facebook"
+                            aria-hidden="true"></i></a>
+                    <a href="https://www.instagram.com/renova.baku" target="_blank"><i class="fa fa-instagram"
+                            aria-hidden="true"></i></a>
+                    <a href="https://www.linkedin.com/company/renova-az/about" target="_blank"><i class="fa fa-linkedin"
+                            aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>

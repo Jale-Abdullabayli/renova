@@ -1,0 +1,53 @@
+@import "../../styles.scss";
+.building {
+    .building-top {
+        @include section-top();
+        margin-top: 100px;
+    }
+    .cover {
+        @include service-cover();
+        .img {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../assets/images/sunset-4924334_640.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+    }
+    .desc {
+        margin: 50px auto;
+        font-size: 22px;
+        text-align: center;
+    }
+    .steps {
+        margin: 100px auto;
+        text-align: center;
+        .steps-top {
+            font-size: 30px;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+        .row {
+            .title {
+                font-size: 25px;
+                font-weight: 600;
+            }
+            .description {
+                font-size: 15px;
+                font-weight: 400;
+            }
+            .img {
+                position: relative;
+                height: 160px;
+                margin: 20px 0;
+                img {
+                    position: absolute;
+                    content: "";
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}

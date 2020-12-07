@@ -1,0 +1,80 @@
+@import "../../styles.scss";
+.interior {
+    .interior-top {
+        @include section-top();
+        margin-top: 100px;
+    }
+    .cover {
+        @include service-cover();
+        .img {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../assets/images/architecture-1087821_640.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+    }
+    .desc {
+        margin: 50px auto;
+        font-size: 22px;
+        text-align: center;
+    }
+    .steps {
+        margin-top: 100px;
+        text-align: center;
+        .steps-top {
+            font-size: 30px;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+        .row {
+            .title {
+                font-size: 25px;
+                font-weight: 600;
+                margin-bottom: 10px;
+            }
+            .description {
+                font-size: 15px;
+                font-weight: 400;
+            }
+        }
+        .horizontal {
+            height: 270px;
+            margin-top: 30px;
+            width: 100%;
+        }
+    }
+}
+
+@media (min-width:768px) {
+    .steps {
+        margin: 0 200px;
+        .vertical {
+            display: none;
+        }
+    }
+}
+
+@media (max-width:768px) {
+    .steps {
+        .steps-main {
+            position: relative;
+            .row {
+                margin-left: 100px;
+                div {
+                    text-align: left;
+                }
+            }
+            .vertical {
+                float: left;
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 100%;
+                width: auto;
+            }
+        }
+        .horizontal {
+            display: none;
+        }
+    }
+}

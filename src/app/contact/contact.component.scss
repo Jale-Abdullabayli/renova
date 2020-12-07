@@ -1,0 +1,7 @@
+@import "../../styles.scss";
+.contact {
+    .contact-top {
+        @include section-top();
+        margin-top: 100px;
+    }
+}

@@ -1,0 +1,28 @@
+@import "../../styles.scss";
+.services {
+    .services-top {
+        @include section-top();
+        margin-top: 100px;
+    }
+    .container {
+        p {
+            font-size: 22px;
+            margin-bottom: 50px;
+        }
+    }
+    .gift {
+        text-align: center;
+        margin-top: 50px;
+        .title {
+            font-size: 25px;
+            font-weight: 700;
+        }
+        p {
+            margin: 10px 0;
+            font-size: 26px;
+        }
+        img {
+            cursor: pointer;
+        }
+    }
+}

@@ -1,1 +1,86 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~font-awesome/css/font-awesome.min.css";
+* {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+section {
+    margin-top: 50px;
+}
+
+$primaryColor:#44B359;
+@mixin section-top {
+    margin-top: 50px;
+    font-size: 30px;
+    padding: 20px;
+    position: relative;
+    margin-left: 100px;
+    font-weight: 600;
+    &::before {
+        position: absolute;
+        width: 25px;
+        left: -40px;
+        margin-right: 30px;
+        top: 50%;
+        height: 2px;
+        background-color: $primaryColor;
+        content: "";
+    }
+}
+
+@mixin service-cover {
+    height: 320px;
+    width: 70%;
+    position: relative;
+    margin: 0 auto;
+    .img {
+        height: 290px;
+        width: 95%;
+        background-repeat: no-repeat;
+        background-position: center;
+        padding: 0;
+        background-size: cover;
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    p {
+        font-size: 27px;
+        font-weight: 400;
+        margin: 10px;
+    }
+    &::after {
+        background-color: $primaryColor;
+        left: 30px;
+        top: 30px;
+        height: 290px;
+        width: 95%;
+        position: absolute;
+        content: "";
+        z-index: -1;
+    }
+    @media (max-width:768px) {
+        width: 100%;
+        .img {
+            width: 100%;
+        }
+        &::after {
+            display: none;
+        }
+    }
+}
+
+
+/* Importing Bootstrap SCSS file. */
+
+@import '~bootstrap/scss/bootstrap';

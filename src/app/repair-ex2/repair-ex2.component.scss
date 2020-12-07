@@ -1,0 +1,77 @@
+@import "../../styles.scss";
+.repair-ex {
+    margin-top: 150px;
+    .repair-top {
+        font-size: 30px;
+        font-weight: 600;
+        text-align: center;
+        position: relative;
+        padding-bottom: 5px;
+        &::after {
+            position: absolute;
+            width: 25px;
+            height: 3px;
+            content: "";
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%, 0);
+            background-color: $primaryColor;
+        }
+    }
+    .img {
+        margin: 20px auto;
+        position: relative;
+        padding: 0;
+        width: fit-content;
+        div {
+            &:focus {
+                outline: 0;
+            }
+            position: absolute;
+            background-color: rgba($color: $primaryColor, $alpha: 0.5);
+            width: 70px;
+            height: 100%;
+            top: 0;
+            content: "";
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+        .leftArrow {
+            left: 0;
+        }
+        .rightArrow {
+            right: 0;
+        }
+        .main {
+            height: 430px;
+            margin: 0 auto;
+            display: block;
+            max-width: 100%;
+            @media (max-width: 768px) {
+                height: 290px;
+            }
+        }
+    }
+    .desc {
+        margin: 0 60px;
+        .row {
+            >div {
+                margin-top: 20px;
+            }
+        }
+        .property {
+            font-size: 20px;
+            .key {
+                font-weight: 600;
+            }
+            .value {
+                font-weight: 400;
+                margin-left: 10px;
+            }
+        }
+    }
+}
